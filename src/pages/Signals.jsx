@@ -68,14 +68,14 @@ const Signals = () => {
               <th scope="col" className="px-6 py-3">Result</th>
             </tr>
           </thead>
-          
+
           {/* Table Body */}
           <tbody className="divide-y divide-gray-700">
             {hasSignals ? (
               allSignals.map((signal) => (
                 <tr key={signal._id} className="hover:bg-gray-700">
                   <td className="px-6 py-4 whitespace-nowrap">
-                    {new Date(signal.time).toLocaleString()}
+                    {new Date(signal.createdAt).toLocaleString()}
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap font-medium text-white">
                     {signal.pair}
